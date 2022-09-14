@@ -1,0 +1,11 @@
+{
+   "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "experimentalDecorators": true,
+      "outDir": "lib",
+      "useDefineForClassFields": false
+   },
+   "include": ["src/**/*"],
+}

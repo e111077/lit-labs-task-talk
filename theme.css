@@ -1,0 +1,12 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--md-sys-color-background);
+  font-family: 'Google Sans', sans-serif;
+  --sl-font-sans: 'Google Sans', sans-serif;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('https://fonts.gstatic.com/s/googlesans/v45/4UaGrENHsxJlGDuGo1OIlL3Owp5eKQtG.woff2') format('woff2');
+}

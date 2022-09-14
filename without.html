@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My First Web Page</title>
+  <script type="module" src="lib/components/feed/feed-shell.js"></script>
+  <script type="module" src="lib/normal/index.js"></script>
+  <link rel="stylesheet" href="theme.css">
+  <link
+      rel="stylesheet"
+      media="(prefers-color-scheme:light)"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.82/dist/themes/light.css"
+    />
+    <link
+      rel="stylesheet"
+      media="(prefers-color-scheme:dark)"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.82/dist/themes/dark.css"
+      onload="document.documentElement.classList.add('sl-theme-dark');"
+    />
+</head>
+
+<body>
+  <feed-shell>
+    <card-renderer></card-renderer>
+  </feed-shell>
+</body>
+
+</html>
