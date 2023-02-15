@@ -6,7 +6,7 @@ import {
   queryAssignedElements,
 } from 'lit/decorators.js';
 import '@shoelace-style/shoelace/dist/components/select/select.js';
-import '@shoelace-style/shoelace/dist/components/menu-item/menu-item.js';
+import '@shoelace-style/shoelace/dist/components/option/option.js';
 import '@shoelace-style/shoelace/dist/components/divider/divider.js';
 
 @customElement('feed-shell')
@@ -27,9 +27,9 @@ export class FeedShell extends LitElement {
             value="dogswithjobs"
             @sl-change=${this.onChange}
           >
-            <sl-menu-item value="dogswithjobs">Dogs with jobs</sl-menu-item>
-            <sl-menu-item value="catswithjobs">Cats with jobs</sl-menu-item>
-            <sl-menu-item value="aww">Aww</sl-menu-item>
+            <sl-option value="dogswithjobs">Dogs with jobs</sl-option>
+            <sl-option value="catswithjobs">Cats with jobs</sl-option>
+            <sl-option value="aww">Aww</sl-option>
           </sl-select>
         </section>
       </div>
@@ -41,6 +41,7 @@ export class FeedShell extends LitElement {
   }
 
   private onChange(e: Event) {
+    console.log(e);
     if (!this.cardRenderers.length) {
       return;
     }
