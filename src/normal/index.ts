@@ -30,7 +30,6 @@ export class CardRenderer extends LitElement {
     if (callId === this.callId) {
       try {
         const json = (await res.json()) as RedditResult;
-        console.log(json);
         this.fetchResults = json.data.children.filter((child) => {
           return (
             child.data.thumbnail !== 'self' &&

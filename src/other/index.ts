@@ -7,16 +7,10 @@ import '../components/you-view/yv-error-message.js';
 
 @customElement('video-loader')
 export class VideoLoader extends LitElement {
-  @state() mediaDevice: 'video' | 'audio' = 'video';
-
   private getMediaStream = new Task(this, {
-    task: async ([mediaDevice]) => {
-      const constraints: MediaStreamConstraints = {};
-      constraints[mediaDevice] = true;
-      const stream = await navigator.mediaDevices.getUserMedia(constraints);
-      return stream;
+    task: async () => {
+      return await navigator.mediaDevices.getUserMedia({ video: true });
     },
-    args: () => [this.mediaDevice],
     autoRun: false,
   });
 
